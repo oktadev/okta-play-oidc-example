@@ -1,6 +1,13 @@
-<p align="center">
-  <img src="https://pac4j.github.io/pac4j/img/logo-play.png" width="300" />
-</p>
+<table border=0 align=center>
+<tr>
+    <td>
+        <img src="https://pac4j.github.io/pac4j/img/logo-play.png" width="300" />
+    </td>
+    <td>
+        <img src="https://devforum.okta.com/uploads/oktadev/original/1X/bf54a16b5fda189e4ad2706fb57cbb7a1e5b8deb.png" />
+    </td>
+</tr>
+</table>
 
 This `okta-play-oidc-example` project is a Java Play Framework app that shows how to use the [play-pac4j-java](https://github.com/pac4j/play-pac4j) security library with OpenID Connect (OIDC) and Okta.
 
