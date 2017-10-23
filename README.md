@@ -16,7 +16,7 @@ This `okta-play-oidc-example` project is a Java Play Framework app that shows ho
 Create an OIDC App in Okta to get a `{clientId}` and `{clientSecret}`. To do this, log in to your [Okta Developer](https://developer.okta.com/) account and navigate to **Applications** > **Add Application**. Click **Web** and click the **Next** button. Give the app a name you’ll remember, specify `http://localhost:9000` as a Base URI, as well as the following values:
  
  * Login redirect URIs: `http://localhost:9000/callback?client_name=OidcClient`
- * Logout redirect URIs: `http://localhost:9000/?forcepostlogouturlafteridp	`
+ * Logout redirect URIs: `http://localhost:9000/?forcepostlogouturlafteridp`
 
 Click **Done** and copy the client ID and secret into your `application.conf` file. While you're in there, modify the `oidc.discoveryUri` to match your Okta domain. For example:
 
