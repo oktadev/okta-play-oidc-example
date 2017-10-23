@@ -11,12 +11,6 @@
 
 This `okta-play-oidc-example` project is a Java Play Framework app that shows how to use the [play-pac4j-java](https://github.com/pac4j/play-pac4j) security library with OpenID Connect (OIDC) and Okta.
 
-## Start & test
-
-Build the project and launch the Play app on [http://localhost:9000](http://localhost:9000):
-
-    sbt run
-
 ## Create an OIDC App in Okta
 
 Create an OIDC App in Okta to get a `{clientId}` and `{clientSecret}`. To do this, log in to your [Okta Developer](https://developer.okta.com/) account and navigate to **Applications** > **Add Application**. Click **Web** and click the **Next** button. Give the app a name you’ll remember, specify `http://localhost:9000` as a Base URI, as well as the following values:
@@ -33,5 +27,13 @@ oidc.discoveryUri = "https://{yourOktaDomain}.com/oauth2/default/.well-known/ope
 You can also create groups and include them as claims. For example, create `ROLE_ADMIN` and `ROLE_USER` groups and add users into them.
 
 Navigate to **API** > **Authorization Servers**, click the **Authorization Servers** tab and edit the `default` one. Click the **Claims** tab and **Add Claim**. Name it "groups" or "roles", and include it in the ID Token. Set the value type to "Groups" and set the filter to be a Regex of `.*`.
+
+## Build and Run
+
+Build the project and launch the Play app on [http://localhost:9000](http://localhost:9000):
+
+    sbt run
+
+
 
 After making these changes, you should be good to go! If you have any issues, please create an issue in this project and I'll do my best to help.
