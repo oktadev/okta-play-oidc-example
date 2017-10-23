@@ -14,6 +14,9 @@ import org.pac4j.play.store.PlaySessionStore;
 import play.Environment;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 
 public class SecurityModule extends AbstractModule {
 
@@ -36,19 +39,17 @@ public class SecurityModule extends AbstractModule {
         final OidcClient oidcClient = new OidcClient(oidcConfiguration);
         oidcClient.addAuthorizationGenerator((ctx, profile) -> {
             if (profile.getAttribute("groups") != null) {
-                profile.addRoles((List) profile.getAttribute("groups"));
-                /*
                 List<String> groups = (List) profile.getAttribute("groups");
-                Set<String> filtered = groups.stream()
+                Set<String> filteredGroups = groups.stream()
                         .filter(group -> group.startsWith("ROLE_"))
-                        .collect(Collectors.toSet());*/
-
+                        .collect(Collectors.toSet());
+                profile.addRoles(filteredGroups);
             }
             return profile;
         });
 
         final String baseUrl = configuration.getString("baseUrl");
-        final Clients clients = new Clients(baseUrl + "/callback",  oidcClient);
+        final Clients clients = new Clients(baseUrl + "/callback", oidcClient);
 
         final org.pac4j.core.config.Config config = new org.pac4j.core.config.Config(clients);
         config.addAuthorizer("admin", new RequireAnyRoleAuthorizer<>("ROLE_ADMIN"));
