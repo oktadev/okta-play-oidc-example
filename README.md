@@ -28,6 +28,8 @@ You can also create groups and include them as claims. For example, create `ROLE
 
 Navigate to **API** > **Authorization Servers**, click the **Authorization Servers** tab and edit the `default` one. Click the **Claims** tab and **Add Claim**. Name it "groups" or "roles", and include it in the ID Token. Set the value type to "Groups" and set the filter to be a Regex of `.*`.
 
+After making these changes, you should be good to go! 
+
 ## Build and Run
 
 Build the project and launch the Play app on [http://localhost:9000](http://localhost:9000):
@@ -35,5 +37,4 @@ Build the project and launch the Play app on [http://localhost:9000](http://loca
     sbt run
 
 
-
-After making these changes, you should be good to go! If you have any issues, please create an issue in this project and I'll do my best to help.
+If you have any issues, please create an issue in this project and I'll do my best to help.
