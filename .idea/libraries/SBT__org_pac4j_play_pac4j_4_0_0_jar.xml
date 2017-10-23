@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.pac4j:play-pac4j:4.0.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.pac4j/play-pac4j/jars/play-pac4j-4.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.pac4j/play-pac4j/srcs/play-pac4j-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
