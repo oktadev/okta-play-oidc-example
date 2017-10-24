@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-
 public class SecurityModule extends AbstractModule {
 
     private final Config configuration;
