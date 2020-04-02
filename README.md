@@ -13,7 +13,7 @@ This `okta-play-oidc-example` project is a Java Play Framework app that shows ho
 
 **Prerequisites**: 
 
-* Install [Java 8 or Java 11](https://adoptopenjdk.net/)
+* Install [Java 8](https://adoptopenjdk.net/)
 * Install [sbt](https://www.scala-sbt.org/1.x/docs/Setup.html)
 
 ## Create an OIDC App in Okta
